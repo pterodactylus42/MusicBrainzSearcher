@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MusicBrainzSearcher"
         mc:Ignorable="d"
-        Title="MusicBrainzSearcher" Height="300" Width="576">
+        Title="MusicBrainzSearcher" Height="173" Width="581">
     <Grid Margin="0,0,10,0">
         <Grid Margin="0,0,25,0">
             <Grid.Resources>
@@ -15,16 +15,20 @@
                 <ColumnDefinition Width="505*"/>
                 <ColumnDefinition Width="36*"/>
             </Grid.ColumnDefinitions>
-            <Button x:Name="SearchButton" Click="SearchButton_Click" Content="Search" HorizontalAlignment="Left" Margin="300,8,0,0" VerticalAlignment="Top"/>
-            <TextBox x:Name="SearchTerm" HorizontalAlignment="Left" Margin="27,10,0,0" Text="search term" TextWrapping="Wrap" VerticalAlignment="Top" Width="240"/>
-            <TextBlock x:Name="SearchResult" HorizontalAlignment="Left" Margin="27,59,0,0" Text="... results ..." TextWrapping="Wrap" VerticalAlignment="Top" Height="176" Width="486" Grid.ColumnSpan="2"/>
+            <Button x:Name="SearchButton" Click="SearchButton_Click" Content="Go" Background="LightBlue"
+        BorderBrush="Black" HorizontalAlignment="Left" Margin="318,45,0,0" VerticalAlignment="Top" Height="32" Width="45"/>
+            <TextBox x:Name="SearchTerm" HorizontalAlignment="Left" Margin="29,45,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="270" Height="32"/>
+            <Label Content="Please search this " HorizontalAlignment="Left" Margin="10,5,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="Msg" Content="Enter your search term" HorizontalAlignment="Center" Margin="29,94,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.344,-0.258" Width="466" FontFamily="Global Monospace"/>
             <ComboBox   x:Name="SearchType"
                         ItemsSource="{DynamicResource myMusicSearchTypes}"
                         IsEditable="False"
                         HorizontalAlignment="Left"
-                        Margin="393,8,0,0"
+                        Margin="121,7,0,0"
                         VerticalAlignment="Top"
-                        Width="120" Grid.ColumnSpan="2" SelectedIndex="0"/>
+                        Width="120" SelectedIndex="0"/>
+            <Label Content="for me:" HorizontalAlignment="Left" Margin="252,3,0,0" VerticalAlignment="Top"/>
+            <Image HorizontalAlignment="Left" Height="100" Margin="395,16,0,0" VerticalAlignment="Top" Width="100" Source="/th.jpg"/>
         </Grid>
     </Grid>
 </Window>

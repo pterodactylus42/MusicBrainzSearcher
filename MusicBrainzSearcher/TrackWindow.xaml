@@ -1,0 +1,19 @@
+﻿<Window x:Class="MusicBrainzSearcher.TrackWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MusicBrainzSearcher"
+        mc:Ignorable="d"
+        Title="TrackWindow" Height="450" Width="800">
+    <Grid>
+        <DataGrid Name="DG1" ItemsSource="{Binding}" AutoGenerateColumns="False" >
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Title"  Binding="{Binding Title}"/>
+                <DataGridTextColumn Header="Disambiguation" Binding="{Binding Disambiguation}" />
+                <DataGridTextColumn Header="EntityType" Binding="{Binding EntityType}" />
+                <DataGridTextColumn Header="MBID" Binding="{Binding MBID}" />
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>
