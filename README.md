@@ -1,6 +1,6 @@
 # MusicBrainzSearcher
-queries the music brainz api using nuget package metabrainz.musicbrainz 
-gui built with wpf using caliburn.micro 
+Queries the music brainz api using the nuget package metabrainz.musicbrainz.
+The gui is built with wpf using caliburn.micro as lightweight MVVM framework.
 
 ## Caliburn Micro binding conventions:
 
