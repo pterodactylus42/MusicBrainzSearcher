@@ -1,11 +1,19 @@
-﻿<UserControl x:Class="MusicBrainzSearcher.Views.ShellView"
+﻿<UserControl
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:MusicBrainzSearcher="clr-namespace:MusicBrainzSearcher" x:Class="MusicBrainzSearcher.Views.ShellView"
              Height="450" Width="800">
     <StackPanel>
-        <Label Content="Hello please write your name" />
-        <TextBox x:Name="Name" />
-        <Button x:Name="SayHello"
-                Content="Click Me" />
+        <Label Content="Search MusicBrainz for ......" />
+        <TextBox x:Name="SearchTerm" />
+        <ComboBox x:Name="SearchTypeCombo" Width="120" SelectedIndex="0">
+            <ComboBox.ItemsSource>
+                <MusicBrainzSearcher:MusicSearchTypes/>
+            </ComboBox.ItemsSource>
+        </ComboBox>
+        <Button x:Name="SearchMusicBrainz"
+                Content="Search" />
+        <TextBox x:Name="MsgTextBox" Text="" TextWrapping="Wrap" Width="800"/>
+        <DataGrid Height="100"/>
     </StackPanel>
 </UserControl>
