@@ -15,4 +15,8 @@
     <PackageReference Include="MetaBrainz.MusicBrainz" Version="3.0.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Resource Include="th.jpg" />
+  </ItemGroup>
+
 </Project>

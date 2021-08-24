@@ -1,19 +1,7 @@
-﻿using System;
-using System.Data;
-using System.Diagnostics;
-using System.Collections.Generic;
+﻿using MetaBrainz.MusicBrainz;
 using System.Collections.ObjectModel;
-using System.Text;
+using System.Diagnostics;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Navigation;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
-using MetaBrainz.MusicBrainz;
 
 namespace MusicBrainzSearcher
 {
@@ -44,7 +32,8 @@ namespace MusicBrainzSearcher
                 try
                 {
                     foundArtists.Add(new Artist(art.Item.Name, art.Item.Gender, art.Item.Type, art.Item.BeginArea.Name, art.Item.Id));
-                } catch(System.NullReferenceException e)
+                }
+                catch (System.NullReferenceException e)
                 {
                     Trace.WriteLine($"could not add {art.Item.Name}, null reference in db ... " + e.StackTrace);
                 }
@@ -61,10 +50,10 @@ namespace MusicBrainzSearcher
             public string BeginArea { get; set; }
             public System.Guid MBID { get; set; }
 
-            public Artist(  string artistName, 
-                            string artistGender, 
-                            string artistType, 
-                            string artistBeginArea, 
+            public Artist(string artistName,
+                            string artistGender,
+                            string artistType,
+                            string artistBeginArea,
                             System.Guid artistMBID)
             {
                 this.Name = artistName;
